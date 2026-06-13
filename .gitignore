@@ -19,6 +19,103 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotmail.jsp
 hs_err_pid*
 replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# IDE - IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+*.iml
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - Eclipse
+.classpath
+.project
+.settings/
+*.launch
+.c9/
+*.sublime-workspace
+
+# IDE - Netbeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# OS
+.DS_Store
+Thumbs.db
+.env.local
+.env.*.local
+
+# Runtime
+*.db
+*.sqlite
+*.sqlite3
+
+# Build
+bin/
+out/
+build/
+
+# Gradle
+.gradle/
+gradle-app.setting
+gradle-wrapper.properties
+!gradle-wrapper.jar
+
+# STS (Spring Tool Suite)
+.sts4-cache/
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+
+# Spring Boot specific
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# Misc
+*.swp
+*.swo
+*~
+.history/
+.classpath
+.factorypath
+.jdt.scope.xml
+.loadpath
+.project
+.pydevproject
+.settings/
+*.sublime-project
+
+# Node modules (if using any frontend build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker volumes
+volumes/
+

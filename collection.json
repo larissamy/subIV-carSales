@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "subIV-carSales",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create car",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/cars",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"brand\":\"Toyota\",\n  \"model\":\"Corolla\",\n  \"year\":2023,\n  \"color\":\"Prata\",\n  \"licensePlate\":\"ABC1D23\",\n  \"price\":120000\n}"
+        }
+      }
+    },
+    {
+      "name": "Get car by id",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/cars/{{carId}}"
+      }
+    },
+    {
+      "name": "Update car",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/cars/{{carId}}",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"color\":\"Preto\",\n  \"price\":118000\n}"
+        }
+      }
+    }
+  ]
+}
