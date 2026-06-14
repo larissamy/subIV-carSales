@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: carsales-config
+data:
+  SERVER_PORT: "8080"
+  SPRING_DATASOURCE_URL: "jdbc:sqlite:/data/cars-main.db"
+  SPRING_DATASOURCE_DRIVER_CLASS_NAME: "org.sqlite.JDBC"
+  SPRING_JPA_DATABASE_PLATFORM: "org.hibernate.community.dialect.SQLiteDialect"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
+
+  SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: "1"
+  SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE: "1"
+  SPRING_DATASOURCE_HIKARI_IDLE_TIMEOUT: "0"
+  SPRING_DATASOURCE_HIKARI_MAX_LIFETIME: "0"
