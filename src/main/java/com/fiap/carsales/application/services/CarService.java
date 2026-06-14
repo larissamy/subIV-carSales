@@ -57,7 +57,7 @@ public class CarService implements CarServicePort {
                 request.price()
         );
         repository.add(car);
-    }
+     }
 
     @Override
     public CarResponse updateCar(UUID id, UpdateCarRequest request) {
