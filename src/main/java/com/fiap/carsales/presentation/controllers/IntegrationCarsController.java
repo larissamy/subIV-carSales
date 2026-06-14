@@ -19,37 +19,37 @@ public class IntegrationCarsController {
         this.service = service;
     }
 
-    @Operation(summary = "Internal endpoint: list available cars ordered by price (asc)")
+    @Operation(summary = "List available cars ordered by price (asc)")
     @GetMapping("/available")
     public ResponseEntity<?> getAllAvailable() {
         return ResponseEntity.ok(service.getCarsSale());
     }
 
-    @Operation(summary = "Internal endpoint: list sold cars ordered by price (asc)")
+    @Operation(summary = "List sold cars ordered by price (asc)")
     @GetMapping("/sold")
     public ResponseEntity<?> getAllSold() {
         return ResponseEntity.ok(service.getCarsSold());
     }
 
-    @Operation(summary = "Internal endpoint: get car by id")
+    @Operation(summary = "Get car by id")
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") UUID id) {
         return ResponseEntity.ok(service.getCarById(id));
     }
 
-    @Operation(summary = "Internal endpoint: reserve a car")
+    @Operation(summary = "Reserve a car")
     @PatchMapping("/{id}/reserve")
     public ResponseEntity<?> reserve(@PathVariable("id") UUID id) {
         return ResponseEntity.ok(service.reserveCar(id));
     }
 
-    @Operation(summary = "Internal endpoint: mark car as sold")
+    @Operation(summary = "Mark car as sold")
     @PatchMapping("/{id}/sold")
     public ResponseEntity<?> sold(@PathVariable("id") UUID id) {
         return ResponseEntity.ok(service.markCarAsSold(id));
     }
 
-    @Operation(summary = "Internal endpoint: make reserved car available again")
+    @Operation(summary = "Make reserved car available again")
     @PatchMapping("/{id}/available")
     public ResponseEntity<?> available(@PathVariable("id") UUID id) {
         return ResponseEntity.ok(service.makeCarAvailable(id));
